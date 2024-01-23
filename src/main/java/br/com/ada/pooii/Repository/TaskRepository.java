@@ -5,17 +5,20 @@ import br.com.ada.pooii.Domain.BaseTask;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TaskRepository<T extends BaseTask> {
+public class TaskRepository<T extends BaseTask> implements TaskInterface<T> {
     private List<T> tasks = new ArrayList<>();
 
+    @Override
     public void addTask(T task) {
         tasks.add(task);
     }
 
+    @Override
     public List<T> getTasks() {
         return new ArrayList<>(tasks);
     }
 
+    @Override
     public T getTaskIndex(int index) {
         if (index >= 0 && index < tasks.size()) {
             return tasks.get(index);
@@ -24,6 +27,7 @@ public class TaskRepository<T extends BaseTask> {
         return null;
     }
 
+    @Override
     public void editarTaskIndex(int index, T novaTask) {
         if (index >= 0 && index < tasks.size()) {
             tasks.set(index, novaTask);
@@ -32,6 +36,7 @@ public class TaskRepository<T extends BaseTask> {
         }
     }
 
+    @Override
     public void removerTaskIndex(int index) {
         if (index >= 0 && index < tasks.size()) {
             tasks.remove(index);

@@ -5,7 +5,7 @@ import br.com.ada.pooii.Domain.BaseTask;
 import java.util.List;
 import java.util.Scanner;
 
-public class TaskView implements UserInterface {
+public class TaskView {
     private final Scanner scanner;
 
     public TaskView(Scanner scanner) {
