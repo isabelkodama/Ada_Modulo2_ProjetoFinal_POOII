@@ -1,10 +1,10 @@
-package br.com.ada.pooii.Repository;
+package br.com.ada.pooii.Interface;
 
 import br.com.ada.pooii.Domain.BaseTask;
 
 import java.util.List;
 
-public interface TaskInterface<T extends BaseTask> {
+public interface Operations<T extends BaseTask> {
     void addTask(T task);
 
     List<T> getTasks();

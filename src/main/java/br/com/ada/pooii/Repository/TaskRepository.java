@@ -1,11 +1,12 @@
 package br.com.ada.pooii.Repository;
 
 import br.com.ada.pooii.Domain.BaseTask;
+import br.com.ada.pooii.Interface.Operations;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TaskRepository<T extends BaseTask> implements TaskInterface<T> {
+public class TaskRepository<T extends BaseTask> implements Operations<T> {
     private List<T> tasks = new ArrayList<>();
 
     @Override
