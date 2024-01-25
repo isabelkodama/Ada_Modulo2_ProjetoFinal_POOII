@@ -1,7 +1,7 @@
 package br.com.ada.pooii.Repository;
 
 import br.com.ada.pooii.Domain.BaseTask;
-import br.com.ada.pooii.Interface.Operations;
+import br.com.ada.pooii.Interfaces.Operations;
 
 import java.util.ArrayList;
 import java.util.List;
